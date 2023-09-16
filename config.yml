@@ -1,0 +1,32 @@
+# Config du plugin AzuriomSkinAPI
+
+# L'URL de l'API Skin. N'oubliez pas de mettre {player} pour que le skin appliqué soit celui de chaque utilisateur.
+skin_api_url: "https://votre-url.com/{player}"
+
+# Envoyer un message de succès au joueur quand le skin est changé automatiquement
+send_success_message: true
+
+# Message de succès (affiché au joueur quand le skin est changé)
+success_message: "&aVotre skin a été mis à jour avec succès !"
+
+# Envoyer des logs dans la console quand le skin est changé automatiquement
+send_console_logs: true
+
+# Temps ( en ticks ( 20 ticks = 1 seconde ) ) avant l'actualisation automatique du skin lors de la connexion ( 40 par defaut = 2 secondes ).
+delay_tick: 40
+# Nous vous conseillons de mettre une valeur élevé sur un serveur moddé ou avec un certain temps de connexion.
+
+# Message de force update
+force_update_success_message: "&aLe skin de l'utilisateur à bien été changé !"
+
+# Si le joueur spécifié n'est pas connecté 
+no_player_connected: "&cLe joueur spécifié n'est actuellement pas connecté sur ce serveur."
+
+# Message d'erreur du reload
+reload_error: "&cErreur lors du reload du plugin :"
+
+# Message de succès du reload 
+reload_success: "&aLe plugin AzuriomSkinAPI à bien été reload."
+
+# Ne pas toucher !!
+version: 1.0
