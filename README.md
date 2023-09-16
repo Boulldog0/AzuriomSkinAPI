@@ -24,3 +24,5 @@ Présentation dans les grands traits :
 2. delay_tick : Delai en ticks avant l'actualisation du skin lors de la connexion d'un joueur ( 20 ticks = 1 seconde )
 
 **Tout les autres messages sont des messages affichés selon le contexte des commandes.**
+
+**Edit : Cela ne fonctionne pas si vous avez le plugin SkinRestorer en version Bungeecord.**
