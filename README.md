@@ -3,6 +3,8 @@
 
 # Le plugin utilise le sous plugin SkinRestorer afin d'appliquer un skin venant de l'api SkinApi de votre site a un utilisateur quand il se connecte ou, si il le change sur le site en étant connecté, pouvoir l'update via une commande.
 
+**Si votre serveur fonctionne sur un Proxy ( Bungeecord, Velocity, Waterfall, ... ), cette ressource ne vous conviendra pas. Veuillez vous rendre sur ce lien pour la version Bungee : https://www.spigotmc.org/resources/azuriomskinapi-bungeecord.112686/
+
 **Commandes, Description et permission :**
 
 | Commande | Description | Permission |
