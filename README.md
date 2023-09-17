@@ -26,3 +26,6 @@ Présentation dans les grands traits :
 **Tout les autres messages sont des messages affichés selon le contexte des commandes.**
 
 **Edit : Cela ne fonctionne pas si vous avez le plugin SkinRestorer en version Bungeecord.**
+
+Serveur discord de support : https://discord.gg/2cVcYB2GaZ
+Post SpigotMC : https://www.spigotmc.org/resources/azuriomskinapi.112676/
