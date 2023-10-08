@@ -3,6 +3,8 @@
 
 # Le plugin utilise le sous plugin SkinRestorer afin d'appliquer un skin venant de l'api SkinApi de votre site a un utilisateur quand il se connecte ou, si il le change sur le site en étant connecté, pouvoir l'update via une commande.
 
+**Si votre serveur fonctionne sur un Proxy ( Bungeecord, Velocity, Waterfall, ... ), cette ressource ne vous conviendra pas. Veuillez vous rendre sur ce lien pour la version Bungee : https://www.spigotmc.org/resources/azuriomskinapi-bungeecord.112686/**
+
 **Commandes, Description et permission :**
 
 | Commande | Description | Permission |
@@ -24,3 +26,8 @@ Présentation dans les grands traits :
 2. delay_tick : Delai en ticks avant l'actualisation du skin lors de la connexion d'un joueur ( 20 ticks = 1 seconde )
 
 **Tout les autres messages sont des messages affichés selon le contexte des commandes.**
+
+**Edit : Cela ne fonctionne pas si vous avez le plugin SkinRestorer en version Bungeecord.**
+
+Serveur discord de support : https://discord.gg/2cVcYB2GaZ
+Post SpigotMC : https://www.spigotmc.org/resources/azuriomskinapi.112676/
