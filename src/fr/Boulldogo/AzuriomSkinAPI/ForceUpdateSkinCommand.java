@@ -22,7 +22,7 @@ public class ForceUpdateSkinCommand implements CommandExecutor {
 
             if (target != null && target.isOnline()) {
                 String skinUrl = plugin.getConfig().getString("skin_api_url").replace("{player}", playerName);
-                String commandToExecute = "skin set " + playerName + " " + skinUrl;
+                String commandToExecute = "skin set " + skinUrl + " " + playerName;
                 
                 plugin.getServer().dispatchCommand(plugin.getServer().getConsoleSender(), commandToExecute);
                 
