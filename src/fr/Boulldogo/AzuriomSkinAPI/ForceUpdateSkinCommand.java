@@ -16,13 +16,13 @@ public class ForceUpdateSkinCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (args.length == 1) {
+        if(args.length == 1) {
             String playerName = args[0];
             Player target = plugin.getServer().getPlayer(playerName);
 
-            if (target != null && target.isOnline()) {
+            if(target != null && target.isOnline()) {
                 String skinUrl = plugin.getConfig().getString("skin_api_url").replace("{player}", playerName);
-                String commandToExecute = "skin set " + playerName + " " + skinUrl;
+                String commandToExecute = "skin set " + playerName + " " + skinUrl + ".png";
                 
                 plugin.getServer().dispatchCommand(plugin.getServer().getConsoleSender(), commandToExecute);
                 
@@ -32,8 +32,7 @@ public class ForceUpdateSkinCommand implements CommandExecutor {
                 }
 
                 if (plugin.getConfig().getBoolean("send_console_logs")) {
-                    String logMessage = ChatColor.translateAlternateColorCodes('&', "Skin de " + playerName + " changé avec succès.");
-                    plugin.getLogger().info(logMessage);
+                    plugin.getLogger().info("Skin of player " + playerName + " update with success !");
                 }
 
                 return true;
@@ -43,7 +42,7 @@ public class ForceUpdateSkinCommand implements CommandExecutor {
                 return false;
             }
         } else {
-            sender.sendMessage("§cUtilisation : /forceupdate-skin <utilisateur>");
+            sender.sendMessage("§cUsage : /forceupdate-skin <username>");
             return false;
         }
     }

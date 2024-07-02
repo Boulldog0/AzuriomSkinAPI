@@ -24,7 +24,7 @@ public class ReloadCommand implements CommandExecutor {
                 plugin.getServer().dispatchCommand(plugin.getServer().getConsoleSender(), commandToExecute);
                 sender.sendMessage(reloadSuccess);
             } catch (Exception e) {
-                sender.sendMessage(reloadError + ChatColor.RED + "Erreur lors du rechargement du plugin : " + e.getMessage());
+                sender.sendMessage(reloadError + ChatColor.RED + "Error occured when trying to reload plugin : " + e.getMessage());
                 e.printStackTrace();
             }
             return true;

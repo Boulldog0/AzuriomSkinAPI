@@ -1,15 +1,15 @@
 name: AzuriomSkinApi
 main: fr.Boulldogo.AzuriomSkinAPI.Main
 author: Boulldogo 
-version: 1.0 
-api-version: 1.8
+version: 1.1.0
+api-version: 1.13
 commands: 
   skin-update: 
     permission: azuriomskinapi.skin-update
-    description: Permet d'update son skin si celui si ne se charge pas automatiquement
+    description: Allow you to force your skin.
   azuriomskinapi-reload:
     permission: azuriomskinapi.reload
     description: Reload AzuriomSkinAPI
   forceupdate-skin:
     permission: azuriomskinapi.forceupdate
-    description: Permet d'update le skin d'un utilisateur
+    description: Allow you to update the skin of other player.

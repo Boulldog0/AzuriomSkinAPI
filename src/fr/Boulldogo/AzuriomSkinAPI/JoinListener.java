@@ -1,6 +1,5 @@
 package fr.Boulldogo.AzuriomSkinAPI;
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -21,23 +20,17 @@ public class JoinListener implements Listener {
         String playerName = player.getName();
 
         String skinUrl = plugin.getConfig().getString("skin_api_url").replace("{player}", playerName);
-        int Time = plugin.getConfig().getInt("delay_tick");
 
-        Bukkit.getScheduler().runTaskLater(plugin, () -> {
-            String command = "skin set " + playerName + " " + skinUrl;
-            plugin.getServer().dispatchCommand(plugin.getServer().getConsoleSender(), command);
-           
+        String command = "skin set " + playerName + " " + skinUrl + ".png";
+        plugin.getServer().dispatchCommand(plugin.getServer().getConsoleSender(), command);
 
-            if (plugin.getConfig().getBoolean("send_success_message")) {
-                String successMessage = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("success_message"));
-                player.sendMessage(successMessage);
-            }
+        if(plugin.getConfig().getBoolean("send_success_message")) {
+            String successMessage = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("success_message"));
+            player.sendMessage(successMessage);
+        }
 
-            if (plugin.getConfig().getBoolean("send_console_logs")) {
-                String logMessage = ChatColor.translateAlternateColorCodes('&', "Skin de " + playerName + " changé avec succès.");
-                plugin.getLogger().info(logMessage);
-            }
-            
-        }, Time);
+        if(plugin.getConfig().getBoolean("send_console_logs")) {
+            plugin.getLogger().info("Skin of player " + playerName + " update with success !");
+		}
     }
 }
