@@ -14,6 +14,10 @@ public class Main extends JavaPlugin implements CommandExecutor {
 
         saveDefaultConfig();
         skinApiUrl = getConfig().getString("skin_api_url");
+        
+        YamlUpdater updater = new YamlUpdater(this);
+        String[] filesToUpdate = {"config.yml"};
+        updater.updateYamlFiles(filesToUpdate);
 
         getServer().getPluginManager().registerEvents(new JoinListener(this), this);
 

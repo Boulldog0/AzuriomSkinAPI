@@ -9,6 +9,9 @@ send_success_message: true
 # Message de succès (affiché au joueur quand le skin est changé)
 success_message: "&aVotre skin a été mis à jour avec succès !"
 
+# Define if you use the old or the newer command
+use-old-command: true
+
 # Envoyer des logs dans la console quand le skin est changé automatiquement
 send_console_logs: true
 

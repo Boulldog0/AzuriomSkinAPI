@@ -21,7 +21,7 @@ public class JoinListener implements Listener {
 
         String skinUrl = plugin.getConfig().getString("skin_api_url").replace("{player}", playerName);
 
-        String command = "skin set " + playerName + " " + skinUrl + ".png";
+        String command = plugin.getConfig().getBoolean("use-old-command") ?  "skin set " + playerName + " " + skinUrl + ".png" : "skin set " + skinUrl + ".png" + " " + playerName;
         plugin.getServer().dispatchCommand(plugin.getServer().getConsoleSender(), command);
 
         if(plugin.getConfig().getBoolean("send_success_message")) {

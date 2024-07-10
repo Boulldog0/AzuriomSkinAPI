@@ -20,7 +20,7 @@ public class SkinUpdateCommand implements CommandExecutor {
             Player player = (Player) sender;
             String playerName = player.getName();
             String skinUrl = plugin.getConfig().getString("skin_api_url").replace("{player}", playerName);
-            String commandToExecute = "skin set " + playerName + " " + skinUrl + ".png";
+            String commandToExecute = plugin.getConfig().getBoolean("use-old-command") ?  "skin set " + playerName + " " + skinUrl + ".png" : "skin set " + skinUrl + ".png" + " " + playerName;
             
             plugin.getServer().dispatchCommand(plugin.getServer().getConsoleSender(), commandToExecute);
             
