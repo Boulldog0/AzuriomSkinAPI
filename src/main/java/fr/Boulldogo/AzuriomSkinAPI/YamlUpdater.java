@@ -1,6 +1,7 @@
 package fr.Boulldogo.AzuriomSkinAPI;
 
 import org.yaml.snakeyaml.DumperOptions;
+import org.yaml.snakeyaml.LoaderOptions;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
 
@@ -15,7 +16,8 @@ public class YamlUpdater {
     public YamlUpdater(Main plugin) {
         this.plugin = plugin;
 
-        this.yamlLoader = new Yaml(new Constructor());
+        LoaderOptions loaderOptions = new LoaderOptions();
+        this.yamlLoader = new Yaml(new Constructor(loaderOptions));
 
         DumperOptions options = new DumperOptions();
         options.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK);
